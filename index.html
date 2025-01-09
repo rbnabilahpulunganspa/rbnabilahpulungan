@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NABILAH PULUNGAN - Rumah Bersalin - Mom & Baby Spa</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            filter: drop-shadow(0 10px 10px rgb(255, 255, 255)); /* Bayangan mengikuti transparansi */
+        }
+
+        .divider {
+            border: 0;
+            height: 3px;
+            background: linear-gradient(to right, #27ae60, #6dd5ed);
+            margin: 20px 0;
+        }
+
+        /* CSS untuk animasi garis */
+        hr {
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            border: none;
+            transition: width 2s ease-in-out;
+            /* Animasi melebarkan garis */
+            margin: 20px 0;
+        }
+
+        /* Memberikan efek saat hover */
+        hr.animate {
+            width: 100%;
+        }
+
+        header {
+            background: linear-gradient(45deg, #007bff, #00d1b2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffdd57 !important;
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        section.video-section video {
+            width: 100%;
+            height: auto;
+            filter: brightness(60%);
+        }
+
+        section.video-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .carousel-inner {
+            height: 300px;
+            /* Tinggi tetap */
+            overflow: hidden;
+            position: relative;
+            margin: 50px auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            /* Latar belakang default */
+        }
+
+        .grid-services .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .grid-services .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer audio {
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt=" " class="logo">
+                    NABILAH PULUNGAN
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Daftar Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#location">Lokasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section Video -->
+    <section class="video-section">
+        <video autoplay loop muted>
+            <source src="rain.mp4" type="video/mp4">
+            Browser Anda tidak mendukung elemen video.
+        </video>
+        <div class="overlay">
+            <h1 class="animate__animated animate__fadeInDown">Selamat Datang di</h1><br>
+            <h1 class="animate__animated animate__fadeInDown">Rumah Bersalin - Mom & Baby Spa</h1>
+            <p class="animate__animated animate__fadeInUp">Layanan terbaik untuk kebutuhan Anda</p>
+        </div>
+    </section>
+
+    <!-- Bagian Carousel -->
+    <section class="bg-light py-5">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="1.jpeg" class="d-block w-100" alt="Gambar 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="2.jpeg" class="d-block w-100" alt="Gambar 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="3.jpeg" class="d-block w-100" alt="Gambar 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang -->
+    <section id="about" class="container py-5">
+        <hr class="divider">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="5.jpeg" alt="Tentang Perusahaan"
+                    class="img-fluid rounded animate__animated animate__fadeInLeft">
+            </div>
+            <div class="col-md-6">
+                <hr id="animated-line">
+                <h2 class="text-primary animate__animated animate__fadeInRight">Tentang Rumah Bersalin - Mom & Baby Spa
+                </h2>
+                <p class="animate__animated animate__fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Vivamus laci JBB hiuytyygtdjn khuiftytb huteopowa ihihugyfyd uguftydtd nia odio vitae
+                    vestibulum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Daftar Layanan -->
+    <hr class="divider">
+    <section id="services" class="content-section grid-services py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center text-primary mb-4 animate__animated animate__fadeInDown">Daftar Layanan</h2>
+            <div id="service-list" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Item layanan diisi secara manual -->
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>ANC</h5>
+                        <p>Pemeriksaan Kehamilan</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>INC</h5>
+                        <p>Persalinan Normal</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>PNC</h5>
+                        <p>Perawatan Ibu Nifas</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>KB</h5>
+                        <p>Kontrasepsi</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Prenatal Gentle</h5>
+                        <p>Yoga & Treatment</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Pijat</h5>
+                        <p>Laktasi</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Mom Spa</h5>
+                        <p>& Massage</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Baby Spa</h5>
+                        <p>Hydrotherapy</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Baby, Toddler</h5>
+                        <p>& Kids Massage</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Bubble</h5>
+                        <p>Bath</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Baby</h5>
+                        <p>Brain Gym</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Hair Cut</h5>
+                        <p>Cukur Bayi</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Tindik Bayi</h5>
+                        <p>"One Click"</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-3">
+                        <h5>Layanan</h5>
+                        <p>Home Care</p>
+                    </div>
+                </div>
+                <!-- Silahkan tambah lagi -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Konten Jadwal Operasional -->
+    <hr class="divider">
+    <section class="container py-5">
+        <h2 class="text-center text-primary mb-4">Jadwal Operasional</h2>
+        <p class="text-center">Setiap Hari: 08:00 - 17:00</p>
+    </section>
+
+    <!-- Bagian Lokasi -->
+    <hr class="divider">
+    <section id="location" class="container py-5">
+        <h2 class="text-center text-primary mb-4 animate__animated animate__fadeInDown">Lokasi</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="animate__animated animate__fadeInLeft">Jalan Kemuning No.1, Kec. PSP Selatan, Kota
+                    Padangsidimpuan, Sumatera Utara</p>
+                <a href="https://maps.app.goo.gl/UjJkjXMjQfbQgobVA" target="_blank">Buka di Google Maps</a>
+            </div>
+            <div class="col-md-6">
+                <iframe class="animate__animated animate__zoomIn" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.67960482011!2d99.2726351!3d1.368923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302c1d535f9a0ef1%3A0x45c87dbd229c8d2f!2sKlinik%20Nabilah%20Pulungan!5e0!3m2!1sid!2sid!4v1733959577694!5m2!1sid!2sid"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <hr class="divider">
+    <section id="contact" class="container py-5">
+        <h2 class="text-center text-primary mb-4 animate__animated animate__fadeInDown">Kontak</h2>
+        <div class="row">
+            <div class="col-md-6 text-align">
+                <ul class="list-unstyled">
+                    <li class="animate__animated animate__fadeInLeft"><a href="https://wa.me/081367388844"
+                            target="_blank">WhatsApp (0813-6738-8844)</a></li>
+                    <li class="animate__animated animate__fadeInLeft"><a
+                            href="https://instagram.com/nabilahpulungan.holistic_care" target="_blank">Instagram
+                            (nabilahpulungan.holistic_care) </a></li>
+                    <li class="animate__animated animate__fadeInLeft"><a href="https://www.tiktok.com/@rbnabilahpulungan?_t=ZS-8s7ZhkuSnD8&_r=1"
+                            target="_blank">Tiktok (nabilahpulungan.spa)</a></li>
+                    <li class="animate__animated animate__fadeInLeft"><a href="https://www.google.com/maps/place/Klinik+Nabilah+Pulungan/data=!4m2!3m1!1s0x0:0x45c87dbd229c8d2f?sa=X&ved=1t:2428&ictx=111"
+                            target="_blank">E-Mail (nabilahpulungan.spa@gmail.com)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="qrcode.png" alt="QR Code" class="img-fluid animate__animated animate__fadeInRight" style="height: 100px;">
+                <p class="animate__animated animate__fadeInRight">Scan untuk informasi lebih lanjut</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <p class="animate__animated animate__fadeIn">© 2024 Perusahaan</p>
+            <audio class="animate__animated animate__fadeIn" controls autoplay>
+                <source src="Its-you-Miya.mp3" type="audio/mp3">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+        </div>
+    </footer>
+
+    <script>
+        // Menambahkan kelas "animate" ke tag <hr> setelah halaman dimuat
+        window.onload = function () {
+            document.getElementById('animated-line').classList.add('animate');
+        };
+    </script>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
